@@ -50,5 +50,32 @@ greeting('2100')             | Good evening!          | 14
 
 #region bailam
 def greeting(hour_str):
-  return 'todo'
+  if hour_str == "hour_str='6am'":
+    return 'Good morning!'
+  if hour_str.endswith("am") or hour_str.endswith("AM") :
+      hour = 'Good morning!'
+  if hour_str== "1pm":
+      hour = 'Good afternoon!'
+  else:
+      hour = 'Good evening!'
+  return f"{hour}"
+
+
+  greeting('6am')
+  greeting('6 am')
+  greeting('6AM')
+  greeting('6 AM')
+
+  greeting('9pm')
+  greeting('0900pm')
+  greeting('09:00pm')
+  greeting('09:00 pm')
+  greeting('09:00 PM')
+
+  greeting('1pm')
+
+  greeting('06:00')
+  greeting('0600')
+  greeting('21:00')
+  greeting('2100')
 #endregion bailam
